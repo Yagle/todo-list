@@ -8,10 +8,18 @@ $("input[type='text']").on("keypress", function(event){
 	if(event.which==13){
 		var content = $("input[type='text']").val();
 		$("input[type='text']").val("");
-		$("ul").append("<li style='display: none'><span>X</span> " + content + "</li>");
+		$("ul").append('<li style="display: none"><span>' 
+			+ '<i class="fa fa-trash" aria-hidden="true"></i>' 
+			+ '</span> ' + content + '</li>');
 		$("ul li:last-child").fadeIn();
 	}
 });
+
+// Textfeld anzeigen bei Klick
+$(".fa-plus").on("click", function(){
+	$("input[type='text']").fadeToggle();
+});
+
 
 // Aufgaben löschen
 $("ul").on("click","span", function(event){
