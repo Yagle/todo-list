@@ -17,7 +17,10 @@ $("input[type='text']").on("keypress", function(event){
 
 // Textfeld anzeigen bei Klick
 $(".fa-plus").on("click", function(){
-	$("input[type='text']").fadeToggle();
+	$("input[type='text']").fadeToggle(function(){
+		$("h1 i").toggleClass("fa-plus");
+		$("h1 i").toggleClass("fa-minus");
+	});
 });
 
 
