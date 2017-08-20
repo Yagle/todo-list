@@ -28,6 +28,7 @@ h1 {
 
 .fa-plus:hover {
 	color: yellow;
+	cursor: pointer;
 }
 
 input[type="text"]{
@@ -64,6 +65,10 @@ ul {
 
 li {
 	line-height: 40px;
+}
+
+li:hover {
+	cursor: pointer;
 }
 
 li:hover span {
